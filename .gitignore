@@ -1,0 +1,8 @@
+node_modules/
+.netlify/
+*.log
+Thumbs.db
+.DS_Store
+
+# Unused duplicate images not referenced by either page
+assets/products/New folder/

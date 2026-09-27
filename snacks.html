@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Murali Pickles — Andhra Traditional Snacks &amp; Sweets</title>
+<meta name="description" content="Andhra traditional snacks and sweets from Murali Pickles — Chekkalu, Murukku, Pootharekulu, Ariselu and more, ordered online with WhatsApp checkout and Cash on Delivery." />
+<link rel="canonical" href="https://muralipickles.com/snacks.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d2734; --navy2:#123647; --navy3:#0a1f29;
+  --cream:#f7f6f1; --card:#ffffff;
+  --gold:#c99a45; --red:#9c2b22; --green:#1d6b3a;
+  --ink:#16232a; --muted:#7c8790; --line:#e6e2d6;
+  --orange:#e2670e; --orange2:#f08a3c; --orange3:#c2560c; --maroon:#5b2410; --maroon2:#3d180a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+img{display:block;max-width:100%}
+em{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 26px;font-weight:700;font-size:14.5px;border:1px solid transparent;transition:.25s;white-space:nowrap}
+.btn.filled{background:var(--maroon);color:#fff;position:relative;overflow:hidden}
+.btn.filled:hover{background:var(--maroon2);transform:translateY(-1px)}
+.btn.filled::before,.add-cart-btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.btn.filled:hover::before,.add-cart-btn:hover::before{left:130%}
+.btn.filled.light{background:#fff;color:var(--maroon)}
+.btn.filled.light:hover{background:#fdeee0}
+.btn.outline{background:transparent;border-color:rgba(255,255,255,.4);color:#fff}
+.btn.outline:hover{border-color:rgba(255,255,255,.75)}
+.btn.outline.dark{border-color:#d5cdb8;color:var(--navy)}
+.btn.outline.dark:hover{border-color:var(--navy)}
+.btn.small{padding:10px 18px;font-size:13.5px}
+
+/* nav (shared look with the main site) */
+.nav{position:sticky;top:0;z-index:80;display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:14px;padding:16px clamp(18px,4vw,58px);background:rgba(13,39,52,.92);backdrop-filter:blur(14px);color:#fff;border-bottom:1px solid rgba(226,103,14,.35)}
+.navlinks{display:flex;gap:26px;align-items:center;font-weight:600;font-size:14.5px;grid-column:2;justify-content:center}
+.navlinks a{opacity:.85}
+.navlinks a:hover,.navlinks a.nav-active{opacity:1;color:var(--orange2)}
+.brand{display:flex;align-items:center;gap:10px;grid-column:1}
+.brand img{width:36px;height:36px;object-fit:contain;border-radius:8px}
+.brand .wordmark{font-family:'Playfair Display',serif;font-weight:600;font-size:20px;letter-spacing:.01em}
+.brand .wordmark em{color:var(--orange2)}
+.nav-right{display:flex;align-items:center;gap:16px;grid-column:3}
+.cart{opacity:.9;font-weight:600;font-size:13.5px;display:flex;align-items:center;gap:6px;position:relative}
+.cart:hover{opacity:1}
+.cart-badge{background:var(--orange2);color:var(--navy3);border-radius:999px;min-width:18px;height:18px;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.hamburger{display:none;flex-direction:column;gap:4px;width:26px;grid-column:4;padding:6px}
+.hamburger span{display:block;height:2px;background:#fff;border-radius:2px;transition:.25s}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:0;right:0;height:100%;width:min(84vw,320px);background:var(--navy3);z-index:120;transform:translateX(100%);transition:transform .35s ease;padding:90px 28px 28px;display:flex;flex-direction:column;gap:22px;box-shadow:-20px 0 50px rgba(0,0,0,.3)}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{color:#fff;font-weight:700;font-size:16px;opacity:.9}
+.mobile-menu a:hover{color:var(--orange2)}
+.menu-backdrop{position:fixed;inset:0;background:rgba(6,15,20,.55);z-index:110;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.menu-backdrop.open{opacity:1;pointer-events:auto}
+
+/* hero (orange-forward) */
+.hero{position:relative;min-height:74vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px clamp(20px,6vw,90px) 70px;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(ellipse 900px 500px at 50% 8%, rgba(255,180,90,.22), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 2px, transparent 2px, transparent 6px),
+    linear-gradient(160deg,var(--maroon2) 0%,var(--maroon) 45%,var(--orange3) 120%);
+}
+.hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--orange2);text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(34px,5.4vw,60px);line-height:1.12;letter-spacing:-.01em;margin:0;text-transform:uppercase}
+.hero h1 em{color:var(--orange2);text-transform:none;font-family:'Playfair Display',serif}
+.hero p{max-width:560px;margin:18px auto 0;color:#f6e6d6;font-size:16px;line-height:1.65}
+.hero-cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.hero-strip{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.hero-strip span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:.03em}
+
+/* section shell */
+.section{padding:90px clamp(20px,6vw,90px)}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;position:relative;padding-bottom:12px}
+.eyebrow::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:26px;height:2px;background:linear-gradient(90deg,transparent,var(--orange),transparent)}
+.section h2{font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,42px);margin:12px 0 0;color:var(--navy);line-height:1.15}
+.section h2 em{color:var(--maroon)}
+.section-head{max-width:640px;margin:0 auto;text-align:center}
+.section-head p{color:var(--muted);font-size:15.5px;line-height:1.65;margin-top:14px}
+
+/* category jump strip */
+.cat-jump{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:34px 0 0}
+.cat-jump a{border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-size:13.5px;font-weight:700;color:var(--navy);background:#fff;transition:.2s}
+.cat-jump a:hover{border-color:var(--orange);color:var(--orange3)}
+
+/* product badge */
+.p-badge{position:absolute;top:12px;left:12px;background:var(--maroon);color:var(--orange2);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;z-index:2;border:1px solid rgba(240,138,60,.5)}
+
+/* snack tile (placeholder visual — no real photography yet) */
+.snack-tile{aspect-ratio:1/1;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;overflow:hidden;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.06) 0px,rgba(255,255,255,.06) 2px,transparent 2px,transparent 8px)}
+.snack-tile.hot{background-color:var(--orange);background-image:linear-gradient(160deg,var(--orange2),var(--orange3)),repeating-linear-gradient(115deg,rgba(255,255,255,.08) 0px,rgba(255,255,255,.08) 2px,transparent 2px,transparent 8px)}
+.snack-tile.sweets{background-image:linear-gradient(160deg,#c99a45,#8a6423),repeating-linear-gradient(115deg,rgba(255,255,255,.08) 0px,rgba(255,255,255,.08) 2px,transparent 2px,transparent 8px)}
+.snack-tile.village{background-image:linear-gradient(160deg,#b98a52,#7a5023),repeating-linear-gradient(115deg,rgba(255,255,255,.08) 0px,rgba(255,255,255,.08) 2px,transparent 2px,transparent 8px)}
+.snack-tile.photo{background:#fff}
+.snack-tile.photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.snack-tile .ring{position:absolute;width:78%;height:78%;border:1px dashed rgba(255,255,255,.45);border-radius:50%}
+.snack-tile .icon{font-size:28px;position:relative;z-index:1;filter:drop-shadow(0 3px 4px rgba(0,0,0,.25))}
+.snack-tile .telugu{position:relative;z-index:1;font-size:19px;font-weight:700;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.3);text-align:center;padding:0 12px;line-height:1.3}
+
+/* shop grid (mirrors the pickle site's buy-box mechanism) */
+.how-to-order{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:999px;padding:14px 26px;margin:28px 0 8px;box-shadow:0 8px 24px rgba(91,36,16,.08)}
+.hto-step{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600;color:var(--navy)}
+.hto-step b{font-weight:800}
+.hto-num{flex:none;width:26px;height:26px;border-radius:50%;background:var(--maroon);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.hto-arrow{color:var(--orange);font-weight:700}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.product-card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 2px 8px rgba(13,39,52,.05),0 16px 40px rgba(13,39,52,.08);transition:.35s;cursor:pointer;position:relative}
+.product-card:hover{transform:translateY(-8px);box-shadow:0 4px 12px rgba(13,39,52,.08),0 26px 54px rgba(13,39,52,.14);border-color:rgba(226,103,14,.45)}
+.qv-btn{position:absolute;bottom:10px;left:50%;transform:translate(-50%,12px);opacity:0;transition:.3s;background:var(--maroon);color:#fff;font-size:11.5px;font-weight:700;padding:8px 16px;border-radius:999px;white-space:nowrap;z-index:2}
+.product-card:hover .qv-btn{opacity:1;transform:translate(-50%,0)}
+.product-body{padding:18px 16px}
+.product-body h3{font-family:'Playfair Display',serif;font-weight:600;margin:0 0 4px;font-size:18px;color:var(--navy)}
+.product-body p{margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.5;min-height:38px}
+.price-line{display:flex;align-items:baseline;gap:7px;margin-bottom:12px;flex-wrap:nowrap}
+.price-line .pw{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.price-line .now{color:var(--navy);font-weight:800;font-size:17px;font-family:'Playfair Display',serif}
+.price-line .mrp{color:var(--muted);text-decoration:line-through;font-size:12px}
+.price-line .save{background:rgba(29,107,58,.1);color:var(--green);font-size:10px;font-weight:800;padding:3px 7px;border-radius:999px;white-space:nowrap}
+.pick-label{font-size:10.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;display:block}
+.variant-pills{display:flex;gap:7px;margin-bottom:6px;flex-wrap:wrap}
+.variant-pill{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;color:var(--navy);background:#fff;transition:.2s;min-height:34px}
+.variant-pill:hover{border-color:var(--navy)}
+.variant-pill.active{background:var(--orange);border-color:var(--orange);color:#fff}
+.qty-block{margin:14px 0 6px}
+.buy-row{display:flex;flex-direction:column;align-items:stretch;gap:10px;margin-bottom:8px}
+.qty-stepper{display:inline-flex;align-items:center;gap:10px;background:var(--maroon);color:#fff;border-radius:999px;padding:6px 8px;align-self:flex-start}
+.qty-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;line-height:1;padding:0;color:#fff;background:rgba(255,255,255,.15)}
+.qty-btn:hover{background:rgba(255,255,255,.28)}
+.qty-btn:active{background:rgba(255,255,255,.4)}
+.qty-val{font-weight:700;font-size:14.5px;min-width:22px;text-align:center}
+.add-cart-btn{background:var(--maroon);color:#fff;border-radius:999px;padding:10px 14px;font-weight:700;font-size:12.5px;text-align:center;white-space:nowrap;position:relative;overflow:hidden;min-height:46px}
+.add-cart-btn:hover{background:var(--maroon2)}
+.cod-note{display:block;font-size:11.5px;font-weight:700;color:var(--orange3)}
+
+/* footer */
+.footer{background:repeating-linear-gradient(115deg,rgba(255,255,255,.02) 0px,rgba(255,255,255,.02) 2px,transparent 2px,transparent 6px),var(--navy3);color:#c9d3d5;padding:56px clamp(20px,6vw,90px) 100px;border-top:1px solid rgba(226,103,14,.35)}
+.footer-inner{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer strong{color:#fff;font-family:'Playfair Display',serif;font-size:20px}
+.footer-links{display:flex;gap:40px;flex-wrap:wrap}
+.footer-links div b{display:block;color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.footer-links div a{display:block;font-size:14px;opacity:.8;margin-bottom:8px}
+.footer-links div a:hover{opacity:1;color:var(--orange2)}
+.small{font-size:13px;opacity:.65}
+.footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:22px}
+
+/* quick-view modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(10,24,31,.6);display:flex;align-items:center;justify-content:center;z-index:200;padding:24px}
+.modal-overlay[hidden]{display:none}
+.modal-card{background:#fff;border-radius:24px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;padding:34px;position:relative;display:grid;grid-template-columns:170px 1fr;gap:26px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:#f1eee4;font-size:20px;line-height:1;display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.modal-close:hover{background:#e6e2d3}
+.modal-tile{border-radius:16px;overflow:hidden}
+.modal-body h3{font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:var(--navy);margin:0 0 4px}
+.modal-body p{color:var(--muted);font-size:14px;line-height:1.6;margin:10px 0 16px}
+.serve-with{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.serve-with b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.serve-with span{font-size:13.5px;color:var(--navy);font-weight:600}
+.qv-added{position:absolute;inset:0;background:#fff;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;z-index:10}
+.qv-added[hidden]{display:none}
+.qv-added .qv-added-check{width:60px;height:60px;border-radius:50%;background:var(--green);color:#fff;font-size:28px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.qv-added h4{font-family:'Playfair Display',serif;color:var(--navy);font-size:21px;margin:0 0 8px}
+.qv-added p{color:var(--muted);font-size:14px;margin:0 0 24px}
+.qv-added-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+@media(max-width:520px){.modal-card{grid-template-columns:1fr;text-align:left;padding:28px}}
+
+/* cart drawer */
+.drawer-backdrop{position:fixed;inset:0;background:rgba(6,15,20,.55);z-index:210;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.drawer-backdrop.open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;height:100%;width:min(92vw,420px);background:var(--cream);z-index:220;transform:translateX(100%);transition:transform .4s ease;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.3)}
+.cart-drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line);background:var(--maroon);color:#fff}
+.drawer-head h3{font-family:'Playfair Display',serif;font-size:19px;margin:0}
+.drawer-close{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:18px;display:flex;align-items:center;justify-content:center}
+.drawer-close:hover{background:rgba(255,255,255,.22)}
+.drawer-body{flex:1;overflow-y:auto;padding:20px 24px}
+.drawer-empty{text-align:center;color:var(--muted);padding:60px 10px;font-size:14.5px}
+.drawer-success{text-align:center;padding:50px 10px}
+.drawer-success .ds-check{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;font-size:30px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.drawer-success h3{font-family:'Playfair Display',serif;color:var(--navy);font-size:21px;margin:0 0 10px}
+.drawer-success p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 24px}
+.cart-line{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.cart-line .cl-tile{width:56px;height:56px;border-radius:12px;overflow:hidden;flex:none}
+.cart-line .cl-tile .snack-tile{width:100%;height:100%}
+.cart-line .cl-tile .snack-tile .telugu{font-size:10px}
+.cart-line .cl-tile .snack-tile .icon{font-size:16px}
+.cart-line-info{flex:1}
+.cart-line-info b{display:block;font-size:14px;color:var(--navy);font-family:'Playfair Display',serif}
+.cart-line-info .cl-weight{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.cl-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.cl-qty{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.cl-qty button{font-weight:800;font-size:14px;color:var(--navy)}
+.cl-price{font-weight:700;color:var(--navy);font-size:13.5px}
+.cl-remove{color:var(--red);font-size:12px;font-weight:700;margin-top:6px}
+.drawer-foot{border-top:1px solid var(--line);padding:20px 24px;background:#fff}
+.df-row{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.df-row.df-savings{color:var(--green);font-weight:800}
+.cart-upsell{background:#fdf0e2;border:1px dashed var(--orange);border-radius:14px;padding:12px 14px;font-size:13px;color:var(--navy);margin-bottom:16px;line-height:1.5}
+.cart-upsell a{color:var(--navy);font-weight:800;text-decoration:underline}
+.df-total{display:flex;justify-content:space-between;font-size:17px;font-weight:800;color:var(--navy);padding-top:8px;border-top:1px solid var(--line);margin-bottom:16px}
+.checkout-form{display:grid;gap:14px}
+.cf-field label{display:block;font-size:12px;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.checkout-form input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;font-family:inherit;min-height:46px}
+.checkout-form input:focus{border-color:var(--orange)}
+.checkout-form input.cf-invalid{border-color:var(--red)}
+.cf-row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cf-error{color:var(--red);font-size:13px;font-weight:600;display:none;background:rgba(156,43,34,.08);border-radius:10px;padding:10px 12px;margin-top:2px}
+.cf-error.show{display:block}
+.cf-note{color:var(--muted);font-size:12.5px;margin:0}
+.back-to-cart{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:14px;display:inline-block}
+.back-to-cart:hover{color:var(--navy)}
+.checkout-step{font-size:12.5px;font-weight:800;color:var(--maroon);text-transform:uppercase;letter-spacing:.06em;margin:0 0 14px;background:#fbe9da;display:inline-block;padding:6px 12px;border-radius:999px}
+
+/* floating whatsapp + sticky mobile cart */
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:90;color:#fff;font-size:26px}
+.wa-float:hover .wa-tip{opacity:1;transform:translateX(0)}
+.wa-tip{position:absolute;right:66px;background:var(--navy3);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:10px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:.25s;pointer-events:none}
+.mobile-cart-bar{position:fixed;bottom:0;left:0;right:0;background:var(--maroon);color:#fff;padding:14px 20px;display:none;align-items:center;justify-content:space-between;z-index:85;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+.mobile-cart-bar.show{display:flex}
+.mobile-cart-bar .btn{padding:9px 18px;font-size:12.5px}
+
+/* mascot shopping guide */
+.mascot-wrap{position:fixed;bottom:24px;left:24px;z-index:95;display:flex;flex-direction:column;align-items:flex-start}
+.mascot-toggle{width:56px;height:67px;background:transparent;border:0;padding:0;cursor:pointer;filter:drop-shadow(0 10px 20px rgba(0,0,0,.3));transition:transform .2s ease;animation:mascotBob 3s ease-in-out infinite}
+.mascot-toggle:hover{transform:scale(1.08)}
+@keyframes mascotBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.mascot-lid{fill:#1a1a1a}
+.mascot-body{fill:var(--orange)}
+.mascot-eye{fill:#fff}
+.mascot-smile{stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round}
+.mascot-arm{stroke:var(--orange);stroke-width:8;fill:none;stroke-linecap:round;transform-origin:78px 60px;animation:mascotWave 1.8s ease-in-out infinite}
+@keyframes mascotWave{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-16deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.mascot-card{position:absolute;bottom:78px;left:0;width:min(84vw,270px);background:#fff;border-radius:18px;padding:18px 18px 16px;box-shadow:0 20px 44px rgba(0,0,0,.22);animation:fadeUp .3s ease both}
+.mascot-card[hidden]{display:none}
+.mascot-close{position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:#f1eee4;color:var(--navy);font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center}
+.mascot-close:hover{background:#e6e2d3}
+.mascot-msg{font-size:13.5px;color:var(--navy);line-height:1.55;margin:0 0 14px;padding-right:16px}
+.mascot-actions{display:flex;gap:8px;flex-wrap:wrap}
+.mascot-actions .btn{padding:8px 14px;font-size:12px}
+@media(max-width:520px){.mascot-wrap{bottom:88px}}
+
+@media(max-width:1100px){ .product-grid{grid-template-columns:repeat(3,1fr)} }
+@media(max-width:780px){
+  .navlinks{display:none}
+  .nav{grid-template-columns:auto 1fr auto auto}
+  .hamburger{display:flex}
+  .mobile-cart-bar{display:none}
+}
+@media(max-width:520px){
+  .product-grid{grid-template-columns:1fr 1fr}
+  .section{padding:60px 18px}
+  .hero{padding:70px 18px 50px}
+  .mobile-cart-bar{display:flex}
+  .wa-float{bottom:88px}
+  .how-to-order{flex-direction:column;align-items:flex-start;border-radius:20px;gap:10px}
+  .hto-arrow{display:none}
+}
+</style>
+</head>
+<body>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<header class="nav">
+  <a class="brand" href="index.html#top"><img src="assets/murali-logo.png" alt="Murali Pickles logo"><span class="wordmark">Murali <em>Pickles</em></span></a>
+  <nav class="navlinks">
+    <a href="index.html#top">Home</a><a href="#hot">Hot Snacks</a><a href="#sweets">Sweets</a><a href="#village">Village Specials</a>
+  </nav>
+  <div class="nav-right">
+    <button type="button" id="cartBtn" class="cart" aria-label="Open cart">Cart <span class="cart-badge" id="cartCount">0</span></button>
+    <a href="index.html#shop" class="btn filled light small">Shop Pickles</a>
+  </div>
+  <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="index.html#top">Home</a>
+  <a href="#hot">Hot Snacks</a>
+  <a href="#sweets">Sweets</a>
+  <a href="#village">Village Specials</a>
+  <a class="btn filled light small" href="index.html#shop" style="margin-top:10px">Shop Pickles</a>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="hero-eyebrow">Andhra Traditional Kitchen</div>
+  <h1>Crunchy Snacks.<br><em>Nostalgic Sweets.</em></h1>
+  <p>The same Andhra tradition behind Murali Pickles — now in crispy chekkalu, melt-in-the-mouth pootharekulu and village-style laddus.</p>
+  <div class="hero-strip">
+    <span>🌶️ Freshly Prepared</span>
+    <span>🍯 Traditional Recipes</span>
+    <span>📦 Cash on Delivery</span>
+  </div>
+  <div class="hero-cta-row">
+    <a class="btn filled light" href="#hot">Explore Hot Snacks</a>
+    <a class="btn outline" href="#sweets">Explore Sweets</a>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:0">
+  <div class="section-head">
+    <span class="eyebrow">Choose Your Category</span>
+    <h2>Three ways to <em>snack Andhra-style</em></h2>
+    <p>Freshly prepared using traditional Andhra recipes and handmade in small batches. Pick a category, add your favourites to the cart, then checkout on WhatsApp — pay only when it arrives.</p>
+  </div>
+  <div class="cat-jump">
+    <a href="#hot">🌶️ Hot Snacks</a>
+    <a href="#sweets">🍯 Traditional Sweets</a>
+    <a href="#village">🌾 Village Specials</a>
+  </div>
+  <div class="how-to-order">
+    <div class="hto-step"><span class="hto-num">1</span><span>Pick an item &amp; choose its size</span></div>
+    <div class="hto-arrow">→</div>
+    <div class="hto-step"><span class="hto-num">2</span><span>Tap <b>Add to cart</b></span></div>
+    <div class="hto-arrow">→</div>
+    <div class="hto-step"><span class="hto-num">3</span><span>Open <b>Cart</b> &amp; checkout on WhatsApp</span></div>
+  </div>
+</section>
+
+<section class="section" id="hot">
+  <div class="section-head">
+    <span class="eyebrow">Andhra Hot Snacks</span>
+    <h2>Crunchy, spiced <em>tea-time favourites</em></h2>
+  </div>
+  <div class="product-grid" id="gridHot"></div>
+</section>
+
+<section class="section" id="sweets" style="background:#fbf6ec">
+  <div class="section-head">
+    <span class="eyebrow">Traditional Andhra Sweets</span>
+    <h2>Sweetness, <em>handed down</em></h2>
+  </div>
+  <div class="product-grid" id="gridSweets"></div>
+</section>
+
+<section class="section" id="village">
+  <div class="section-head">
+    <span class="eyebrow">Village-Style Specials</span>
+    <h2>Earthy classics, <em>made with jaggery and ghee</em></h2>
+  </div>
+  <div class="product-grid" id="gridVillage"></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <strong>Murali Pickles</strong>
+      <p class="small" style="max-width:260px;margin-top:10px;line-height:1.6">Andhra tradition, in every jar and every jar-full of snacks.</p>
+    </div>
+    <div class="footer-links">
+      <div><b>Explore</b><a href="index.html#top">Pickles Home</a><a href="#hot">Hot Snacks</a><a href="#sweets">Sweets</a><a href="#village">Village Specials</a></div>
+      <div><b>Help</b><a href="#" id="footerWhatsapp">WhatsApp</a><a href="index.html#faq">FAQs</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="small">© 2026 Murali Pickles.</span>
+    <span class="small">Guntur, Andhra Pradesh</span>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="quickView" hidden role="dialog" aria-modal="true" aria-label="Product quick view">
+  <div class="modal-card">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-tile" id="modalTile"></div>
+    <div class="modal-body">
+      <span class="p-badge" id="modalBadge" style="position:static;display:inline-block;margin-bottom:8px"></span>
+      <h3 id="modalName"></h3>
+      <div class="price-line">
+        <span class="pw"></span><span class="now"></span><span class="mrp"></span><span class="save"></span>
+      </div>
+      <p id="modalDesc"></p>
+      <span class="pick-label">Step 1 — Choose size</span>
+      <div class="variant-pills" id="modalPills">
+        <button type="button" class="variant-pill active" data-weight="250g">250g</button>
+        <button type="button" class="variant-pill" data-weight="500g">500g</button>
+        <button type="button" class="variant-pill" data-weight="1kg">1kg</button>
+      </div>
+      <div class="qty-block">
+        <span class="pick-label">Step 2 — How many packs?</span>
+        <div class="buy-row">
+          <div class="qty-stepper">
+            <button type="button" class="qty-btn minus" aria-label="Decrease quantity">−</button>
+            <span class="qty-val">1</span>
+            <button type="button" class="qty-btn plus" aria-label="Increase quantity">+</button>
+          </div>
+          <button type="button" class="add-cart-btn">Add to cart</button>
+        </div>
+      </div>
+      <span class="cod-note">No online payment — pay cash when it arrives</span>
+      <div class="serve-with"><b>Perfect For</b><span id="modalPerfectFor"></span></div>
+    </div>
+    <div class="qv-added" id="qvAdded" hidden>
+      <div class="qv-added-check">✓</div>
+      <h4>Added to your cart</h4>
+      <p id="qvAddedSummary"></p>
+      <div class="qv-added-actions">
+        <button type="button" class="btn outline dark" id="qvContinueBtn">Continue Shopping</button>
+        <button type="button" class="btn filled" id="qvCheckoutBtn">View Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <div class="drawer-head">
+    <h3 id="drawerTitle">Your Snacks Box</h3>
+    <button type="button" class="drawer-close" id="drawerClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot" id="drawerFoot"></div>
+</aside>
+
+<button type="button" class="wa-float" id="waFloat" aria-label="Chat with Murali on WhatsApp"><span class="wa-tip">Need help? Chat with Murali</span>💬</button>
+
+<div class="mascot-wrap" id="mascotWrap">
+  <div class="mascot-card" id="mascotCard" hidden role="dialog" aria-label="Shopping guide">
+    <button type="button" class="mascot-close" id="mascotClose" aria-label="Close guide">&times;</button>
+    <p class="mascot-msg" id="mascotMsg"></p>
+    <div class="mascot-actions" id="mascotActions"></div>
+  </div>
+  <button type="button" class="mascot-toggle" id="mascotToggle" aria-label="Open shopping guide">
+    <svg viewBox="0 0 100 120" width="56" height="67">
+      <rect x="30" y="4" width="40" height="14" rx="4" class="mascot-lid"/>
+      <rect x="20" y="18" width="60" height="82" rx="16" class="mascot-body"/>
+      <circle cx="40" cy="55" r="5" class="mascot-eye"/>
+      <circle cx="60" cy="55" r="5" class="mascot-eye"/>
+      <path d="M38 72 Q50 83 62 72" class="mascot-smile"/>
+      <path d="M78 60 Q95 50 92 34" class="mascot-arm"/>
+    </svg>
+  </button>
+</div>
+
+<div class="mobile-cart-bar" id="mobileCartBar">
+  <b id="mobileCartText">0 items • ₹0</b>
+  <button type="button" class="btn filled light" id="mobileCartBtn">View Cart</button>
+</div>
+
+<script>
+// ===== Configuration =====
+// TODO: replace with the real business WhatsApp number if different from the pickle site
+const WHATSAPP_NUMBER = '919290625105';
+
+// ===== Centralized snack data =====
+// Prices are dummy placeholders, same as the pickle jars — replace before launch.
+// Janthikalu and Nippattu have no supplied photo yet, so they fall back to a Telugu-name placeholder tile.
+const PRODUCTS = [
+  // ---- Hot Snacks ----
+  { id:'chekkalu', cat:'hot', name:'Chekkalu', telugu:'చెక్కలు', icon:'🌶️', badge:'Classic', img:'assets/snacks%20photos/Chekkalu.png',
+    desc:'Crispy rice crackers with sesame and curry leaves.',
+    variants:[{weight:'250g',mrp:179,now:149,off:17},{weight:'500g',mrp:329,now:279,off:15},{weight:'1kg',mrp:599,now:499,off:17}] },
+  { id:'murukku', cat:'hot', name:'Murukku', telugu:'మురుక్కు', icon:'🌶️', badge:'Bestloved', img:'assets/snacks%20photos/Murukku.png',
+    desc:'Spiral rice-flour crisps with a savoury, buttery crunch.',
+    variants:[{weight:'250g',mrp:189,now:159,off:16},{weight:'500g',mrp:349,now:289,off:17},{weight:'1kg',mrp:629,now:519,off:17}] },
+  { id:'janthikalu', cat:'hot', name:'Janthikalu', telugu:'జంతికలు', icon:'🌶️', badge:'Classic',
+    desc:'Twisted, crunchy snack seasoned with cumin and chilli.',
+    variants:[{weight:'250g',mrp:169,now:139,off:18},{weight:'500g',mrp:309,now:259,off:16},{weight:'1kg',mrp:559,now:459,off:18}] },
+  { id:'karapusa', cat:'hot', name:'Karapusa', telugu:'కారప్పూస', icon:'🌶️', badge:'Andhra Special', img:'assets/snacks%20photos/Karapusa.png',
+    desc:'Fine, fiery sev-style mixture with an unmistakable Andhra kick.',
+    variants:[{weight:'250g',mrp:169,now:139,off:18},{weight:'500g',mrp:309,now:259,off:16},{weight:'1kg',mrp:559,now:459,off:18}] },
+  { id:'mixture', cat:'hot', name:'Mixture', telugu:'మిక్చర్', icon:'🌶️', badge:'Bestloved', img:'assets/snacks%20photos/Mixture.png',
+    desc:'A classic blend of fried lentils, nuts, sev and spice.',
+    variants:[{weight:'250g',mrp:179,now:149,off:17},{weight:'500g',mrp:329,now:279,off:15},{weight:'1kg',mrp:599,now:499,off:17}] },
+  { id:'ribbonpakoda', cat:'hot', name:'Ribbon Pakoda', telugu:'రిబ్బన్ పకోడీ', icon:'🌶️', badge:'Classic', img:'assets/snacks%20photos/Ribbon%20Pakoda.png',
+    desc:'Thin, ribbon-shaped crisps with a mild, buttery spice.',
+    variants:[{weight:'250g',mrp:179,now:149,off:17},{weight:'500g',mrp:329,now:279,off:15},{weight:'1kg',mrp:599,now:499,off:17}] },
+  { id:'nippattu', cat:'hot', name:'Nippattu', telugu:'నిప్పట్టు', icon:'🌶️', badge:'Andhra Special',
+    desc:'Flat, crisp rice crackers with peanuts and curry leaves.',
+    variants:[{weight:'250g',mrp:189,now:159,off:16},{weight:'500g',mrp:349,now:289,off:17},{weight:'1kg',mrp:629,now:519,off:17}] },
+  { id:'karaboondi', cat:'hot', name:'Kara Boondi', telugu:'కారం బూంది', icon:'🌶️', badge:'Bestloved', img:'assets/snacks%20photos/Kara%20Boondi.png',
+    desc:'Tiny fried gram-flour pearls, boldly seasoned.',
+    variants:[{weight:'250g',mrp:169,now:139,off:18},{weight:'500g',mrp:309,now:259,off:16},{weight:'1kg',mrp:559,now:459,off:18}] },
+
+  // ---- Traditional Sweets ----
+  { id:'pootharekulu', cat:'sweets', name:'Pootharekulu', telugu:'పూతరేకులు', icon:'🍯', badge:'Signature', img:'assets/snacks%20photos/Pootharekulu.png',
+    desc:'Paper-thin rice sheets layered with ghee and sugar.',
+    variants:[{weight:'250g',mrp:349,now:289,off:17},{weight:'500g',mrp:649,now:539,off:17},{weight:'1kg',mrp:1199,now:989,off:18}] },
+  { id:'kaja', cat:'sweets', name:'Kaja', telugu:'కాజా', icon:'🍯', badge:'Classic', img:'assets/snacks%20photos/kaja.png',
+    desc:'Flaky, syrup-soaked layered pastry.',
+    variants:[{weight:'250g',mrp:279,now:229,off:18},{weight:'500g',mrp:519,now:429,off:17},{weight:'1kg',mrp:949,now:789,off:17}] },
+  { id:'bandarladdu', cat:'sweets', name:'Bandar Laddu', telugu:'బందర్ లడ్డు', icon:'🍯', badge:'Andhra Special', img:'assets/snacks%20photos/Bandar%20Laddu.png',
+    desc:'Soft gram-flour laddu, a Machilipatnam specialty.',
+    variants:[{weight:'250g',mrp:299,now:249,off:17},{weight:'500g',mrp:559,now:459,off:18},{weight:'1kg',mrp:1029,now:849,off:17}] },
+  { id:'ariselu', cat:'sweets', name:'Ariselu', telugu:'అరిసెలు', icon:'🍯', badge:'Festival Favourite', img:'assets/snacks%20photos/Ariselu.png',
+    desc:'Rice and jaggery discs, fried to a deep golden brown.',
+    variants:[{weight:'250g',mrp:269,now:219,off:19},{weight:'500g',mrp:499,now:409,off:18},{weight:'1kg',mrp:929,now:769,off:17}] },
+  { id:'sunnundalu', cat:'sweets', name:'Sunnundalu', telugu:'సున్నుండలు', icon:'🍯', badge:'Classic', img:'assets/snacks%20photos/Sunnundalu.png',
+    desc:'Urad dal laddus, rich with ghee.',
+    variants:[{weight:'250g',mrp:289,now:239,off:17},{weight:'500g',mrp:539,now:449,off:17},{weight:'1kg',mrp:989,now:819,off:17}] },
+  { id:'boondiladdu', cat:'sweets', name:'Boondi Laddu', telugu:'బూంది లడ్డు', icon:'🍯', badge:'Bestloved', img:'assets/snacks%20photos/Boondi%20Laddu.png',
+    desc:'Classic laddu of tiny fried gram-flour pearls.',
+    variants:[{weight:'250g',mrp:249,now:209,off:16},{weight:'500g',mrp:469,now:389,off:17},{weight:'1kg',mrp:869,now:719,off:17}] },
+  { id:'bobbatlu', cat:'sweets', name:'Bobbatlu', telugu:'బొబ్బట్లు', icon:'🍯', badge:'Festival Favourite', img:'assets/snacks%20photos/Bobbatlu.png',
+    desc:'Sweet lentil-stuffed flatbread, a festival favourite.',
+    variants:[{weight:'250g',mrp:269,now:219,off:19},{weight:'500g',mrp:499,now:409,off:18},{weight:'1kg',mrp:929,now:769,off:17}] },
+  { id:'mysorepak', cat:'sweets', name:'Mysore Pak', telugu:'మైసూర్ పాక్', icon:'🍯', badge:'Signature', img:'assets/snacks%20photos/Mysore%20Pak.png',
+    desc:'Rich, melt-in-the-mouth gram flour and ghee fudge.',
+    variants:[{weight:'250g',mrp:329,now:269,off:18},{weight:'500g',mrp:609,now:499,off:18},{weight:'1kg',mrp:1129,now:929,off:18}] },
+
+  // ---- Village Specials ----
+  { id:'ragiladdu', cat:'village', name:'Ragi Laddu', telugu:'రాగి లడ్డు', icon:'🌾', badge:'Village Style', img:'assets/snacks%20photos/Ragi%20Laddu.png',
+    desc:'Finger millet laddu, wholesome and earthy.',
+    variants:[{weight:'250g',mrp:249,now:209,off:16},{weight:'500g',mrp:469,now:389,off:17},{weight:'1kg',mrp:869,now:719,off:17}] },
+  { id:'jonnaladdu', cat:'village', name:'Jonna Laddu', telugu:'జొన్న లడ్డు', icon:'🌾', badge:'Village Style', img:'assets/snacks%20photos/Jonna%20Laddu.png',
+    desc:'Sorghum laddu sweetened with jaggery and ghee.',
+    variants:[{weight:'250g',mrp:249,now:209,off:16},{weight:'500g',mrp:469,now:389,off:17},{weight:'1kg',mrp:869,now:719,off:17}] },
+  { id:'bellamariselu', cat:'village', name:'Bellam Ariselu', telugu:'బెల్లం అరిసెలు', icon:'🌾', badge:'Village Style', img:'assets/snacks%20photos/Bellam%20Ariselu.png',
+    desc:'Jaggery-sweetened rice discs, village style.',
+    variants:[{weight:'250g',mrp:269,now:219,off:19},{weight:'500g',mrp:499,now:409,off:18},{weight:'1kg',mrp:929,now:769,off:17}] },
+  { id:'kobbarikajjikayalu', cat:'village', name:'Kobbari Kajjikayalu', telugu:'కొబ్బరి కజ్జికాయలు', icon:'🌾', badge:'Festival Favourite', img:'assets/snacks%20photos/Kobbari%20Kajjikayalu.png',
+    desc:'Coconut-filled fried pastry pockets.',
+    variants:[{weight:'250g',mrp:289,now:239,off:17},{weight:'500g',mrp:539,now:449,off:17},{weight:'1kg',mrp:989,now:819,off:17}] },
+  { id:'dryfruitladdu', cat:'village', name:'Dry Fruit Laddu', telugu:'డ్రై ఫ్రూట్ లడ్డు', icon:'🌾', badge:'Premium', img:'assets/snacks%20photos/Dry%20Fruit%20Laddu.png',
+    desc:'Laddu packed with roasted nuts and dry fruits.',
+    variants:[{weight:'250g',mrp:399,now:329,off:18},{weight:'500g',mrp:749,now:619,off:17},{weight:'1kg',mrp:1399,now:1149,off:18}] },
+  { id:'cashewpakam', cat:'village', name:'Cashew Pakam', telugu:'జీడిపప్పు పాకం', icon:'🌾', badge:'Premium', img:'assets/snacks%20photos/Cashew%20Pakam.png',
+    desc:'Cashew brittle set in a rich jaggery syrup.',
+    variants:[{weight:'250g',mrp:429,now:349,off:19},{weight:'500g',mrp:799,now:659,off:18},{weight:'1kg',mrp:1499,now:1229,off:18}] }
+];
+
+function tileHTML(p, extraClass){
+  if(p.img){
+    return `<div class="snack-tile photo ${extraClass||''}"><img src="${p.img}" alt="${p.name}"></div>`;
+  }
+  return `<div class="snack-tile ${p.cat} ${extraClass||''}"><div class="ring"></div><span class="icon">${p.icon}</span><span class="telugu">${p.telugu}</span></div>`;
+}
+function variantPillsHTML(variants, activeIdx){
+  return variants.map((v,i)=>`<button type="button" class="variant-pill${i===activeIdx?' active':''}" data-weight="${v.weight}" data-mrp="${v.mrp}" data-now="${v.now}" data-off="${v.off}">${v.weight}</button>`).join('');
+}
+function productCardHTML(p){
+  const v0 = p.variants[0];
+  return `
+  <article class="product-card" data-id="${p.id}">
+    ${tileHTML(p)}
+    <span class="p-badge">${p.badge}</span>
+    <span class="qv-btn">Quick View</span>
+    <div class="product-body">
+      <h3>${p.name}</h3>
+      <div class="price-line"><span class="pw">${v0.weight}</span><span class="now">₹${v0.now}</span><span class="mrp">₹${v0.mrp}</span><span class="save">Save ${v0.off}%</span></div>
+      <p>${p.desc}</p>
+      <span class="pick-label">Step 1 — Choose size</span>
+      <div class="variant-pills">${variantPillsHTML(p.variants,0)}</div>
+      <div class="qty-block">
+        <span class="pick-label">Step 2 — How many packs?</span>
+        <div class="buy-row">
+          <div class="qty-stepper"><button type="button" class="qty-btn minus" aria-label="Decrease quantity">−</button><span class="qty-val">1</span><button type="button" class="qty-btn plus" aria-label="Increase quantity">+</button></div>
+          <button type="button" class="add-cart-btn">Add to cart — ₹${v0.now}</button>
+        </div>
+      </div>
+      <span class="cod-note">No online payment — pay cash when it arrives</span>
+    </div>
+  </article>`;
+}
+document.getElementById('gridHot').innerHTML = PRODUCTS.filter(p=>p.cat==='hot').map(productCardHTML).join('');
+document.getElementById('gridSweets').innerHTML = PRODUCTS.filter(p=>p.cat==='sweets').map(productCardHTML).join('');
+document.getElementById('gridVillage').innerHTML = PRODUCTS.filter(p=>p.cat==='village').map(productCardHTML).join('');
+
+const PERFECT_FOR = { hot:'Tea-time snacking', sweets:'Festivals & gifting', village:'Family get-togethers' };
+
+// ===== Cart (same mechanism as the pickle site) =====
+let cartItems = []; // {id, name, tileClass, weight, price, qty}
+function findCartLine(id, weight){ return cartItems.find(l => l.id === id && l.weight === weight); }
+function addToCart(id, name, tileClass, weight, price, qty){
+  const existing = findCartLine(id, weight);
+  if(existing){ existing.qty += qty; }
+  else { cartItems.push({ id, name, tileClass, weight, price, qty }); }
+  updateCartUI();
+}
+function removeCartLine(index){ cartItems.splice(index,1); updateCartUI(); renderDrawer(); }
+function cartCount(){ return cartItems.reduce((s,l)=>s+l.qty,0); }
+function cartTotal(){ return cartItems.reduce((s,l)=>s+l.qty*l.price,0); }
+function cartSavings(){
+  return cartItems.reduce((s,l)=>{
+    const p = PRODUCTS.find(x=>x.id===l.id);
+    const v = p && p.variants.find(v=>v.weight===l.weight);
+    return s + (v ? (v.mrp - v.now) * l.qty : 0);
+  }, 0);
+}
+function updateCartUI(){
+  document.getElementById('cartCount').textContent = cartCount();
+  const bar = document.getElementById('mobileCartBar');
+  if(cartCount() > 0){
+    bar.classList.add('show');
+    document.getElementById('mobileCartText').textContent = `${cartCount()} item${cartCount()>1?'s':''} • ₹${cartTotal()}`;
+  } else { bar.classList.remove('show'); }
+  if(!document.getElementById('cartDrawer').classList.contains('open')) return;
+  renderDrawer();
+}
+
+function refreshBuyBox(box){
+  const active = box.querySelector('.variant-pill.active');
+  const now = Number(active.dataset.now);
+  const qty = Number(box.querySelector('.qty-val').textContent);
+  box.querySelector('.price-line .pw').textContent = active.dataset.weight;
+  box.querySelector('.price-line .now').textContent = '₹' + active.dataset.now;
+  box.querySelector('.price-line .mrp').textContent = '₹' + active.dataset.mrp;
+  box.querySelector('.price-line .save').textContent = 'Save ' + active.dataset.off + '%';
+  box.querySelector('.add-cart-btn').textContent = `Add to cart — ₹${now * qty}`;
+}
+function wireBuyBox(box, getInfo, onAdded){
+  box.querySelectorAll('.variant-pill').forEach(pill=>{
+    pill.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      box.querySelectorAll('.variant-pill').forEach(p=>p.classList.remove('active'));
+      pill.classList.add('active');
+      refreshBuyBox(box);
+    });
+  });
+  box.querySelector('.qty-btn.plus').addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const el = box.querySelector('.qty-val');
+    el.textContent = Number(el.textContent) + 1;
+    refreshBuyBox(box);
+  });
+  box.querySelector('.qty-btn.minus').addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const el = box.querySelector('.qty-val');
+    el.textContent = Math.max(1, Number(el.textContent) - 1);
+    refreshBuyBox(box);
+  });
+  box.querySelector('.add-cart-btn').addEventListener('click', (e)=>{
+    e.stopPropagation();
+    const active = box.querySelector('.variant-pill.active');
+    const price = Number(active.dataset.now);
+    const qty = Number(box.querySelector('.qty-val').textContent);
+    const info = getInfo();
+    const weight = active.dataset.weight;
+    addToCart(info.id, info.name, info.tileClass, weight, price, qty);
+    box.querySelector('.qty-val').textContent = 1;
+    refreshBuyBox(box);
+    const btn = box.querySelector('.add-cart-btn');
+    const baseline = btn.textContent;
+    btn.textContent = 'Added ✓';
+    setTimeout(()=>{ btn.textContent = baseline; }, 900);
+    if(onAdded) onAdded({ name: info.name, weight, qty });
+  });
+}
+document.querySelectorAll('.product-card').forEach(card=>{
+  const id = card.dataset.id;
+  const p = PRODUCTS.find(x=>x.id===id);
+  wireBuyBox(card, ()=>({ id:p.id, name:p.name, tileClass:p.cat }));
+  refreshBuyBox(card);
+});
+
+// ===== Quick view =====
+const quickView = document.getElementById('quickView');
+const modalBody = document.querySelector('.modal-body');
+const qvAdded = document.getElementById('qvAdded');
+let modalProductId = null;
+wireBuyBox(modalBody, ()=>{
+  const p = PRODUCTS.find(x=>x.id===modalProductId);
+  return { id:p.id, name:p.name, tileClass:p.cat };
+}, (added)=>{
+  document.getElementById('qvAddedSummary').textContent = `${added.name} (${added.weight}) x${added.qty} added to your cart.`;
+  qvAdded.hidden = false;
+});
+document.getElementById('qvContinueBtn').addEventListener('click', ()=>{ qvAdded.hidden = true; quickView.hidden = true; });
+document.getElementById('qvCheckoutBtn').addEventListener('click', ()=>{ qvAdded.hidden = true; quickView.hidden = true; openDrawer(); });
+
+document.querySelectorAll('.product-card').forEach(card=>{
+  card.addEventListener('click', (e)=>{
+    if(e.target.closest('.variant-pills') || e.target.closest('.buy-row')) return;
+    const p = PRODUCTS.find(x=>x.id===card.dataset.id);
+    modalProductId = p.id;
+    document.getElementById('modalTile').innerHTML = tileHTML(p);
+    document.getElementById('modalBadge').textContent = p.badge;
+    document.getElementById('modalName').textContent = p.name + ' — ' + p.telugu;
+    document.getElementById('modalDesc').textContent = p.desc;
+    document.getElementById('modalPerfectFor').textContent = PERFECT_FOR[p.cat];
+
+    const modalPills = document.querySelectorAll('#modalPills .variant-pill');
+    p.variants.forEach((v,i)=>{
+      modalPills[i].dataset.mrp = v.mrp;
+      modalPills[i].dataset.now = v.now;
+      modalPills[i].dataset.off = v.off;
+      modalPills[i].dataset.weight = v.weight;
+      modalPills[i].textContent = v.weight;
+      modalPills[i].classList.toggle('active', i===0);
+    });
+    modalBody.querySelector('.qty-val').textContent = 1;
+    refreshBuyBox(modalBody);
+    qvAdded.hidden = true;
+    quickView.hidden = false;
+  });
+});
+document.getElementById('modalClose').addEventListener('click', ()=>{ quickView.hidden = true; });
+quickView.addEventListener('click', (e)=>{ if(e.target === quickView) quickView.hidden = true; });
+
+// ===== Cart drawer =====
+const cartDrawer = document.getElementById('cartDrawer');
+const drawerBackdrop = document.getElementById('drawerBackdrop');
+let drawerView = 'cart';
+function openDrawer(){ drawerView = 'cart'; cartDrawer.classList.add('open'); drawerBackdrop.classList.add('open'); renderDrawer(); }
+function closeDrawer(){ cartDrawer.classList.remove('open'); drawerBackdrop.classList.remove('open'); }
+
+function renderDrawer(){
+  document.getElementById('drawerTitle').textContent = drawerView === 'cart' ? 'Your Snacks Box' : drawerView === 'checkout' ? 'Checkout Details' : 'Order Sent';
+  const body = document.getElementById('drawerBody');
+  const foot = document.getElementById('drawerFoot');
+
+  if(drawerView === 'success'){
+    body.innerHTML = `
+      <div class="drawer-success">
+        <div class="ds-check">✓</div>
+        <h3>Order sent!</h3>
+        <p>Your order has been sent on WhatsApp. We'll confirm availability and delivery details there shortly.</p>
+        <button type="button" class="btn filled" id="continueShoppingBtn">Continue Shopping</button>
+      </div>`;
+    foot.innerHTML = '';
+    document.getElementById('continueShoppingBtn').addEventListener('click', closeDrawer);
+    return;
+  }
+
+  if(drawerView === 'cart'){
+    if(!cartItems.length){
+      body.innerHTML = '<div class="drawer-empty">Your cart is empty. Add a few snacks to get started!</div>';
+      foot.innerHTML = '';
+      return;
+    }
+    const catsInCart = new Set(cartItems.map(l=>PRODUCTS.find(p=>p.id===l.id)?.cat).filter(Boolean));
+    const CROSS_SELL = {
+      hot: { label: 'Traditional Sweets', href: '#sweets', emoji: '🍯' },
+      sweets: { label: 'Hot Snacks', href: '#hot', emoji: '🌶️' },
+      village: { label: 'Hot Snacks', href: '#hot', emoji: '🌶️' }
+    };
+    let upsellHTML = '';
+    if(catsInCart.size === 1){
+      const s = CROSS_SELL[[...catsInCart][0]];
+      if(s) upsellHTML = `<div class="cart-upsell">${s.emoji} Pair it with our <a href="${s.href}" id="upsellLink">${s.label}</a> — perfect for gifting too.</div>`;
+    }
+    body.innerHTML = `<p class="checkout-step">Step 1 — Review what's in your cart</p>${upsellHTML}` + cartItems.map((l,i)=>{
+      const p = PRODUCTS.find(x=>x.id===l.id);
+      return `
+      <div class="cart-line" data-i="${i}">
+        <div class="cl-tile">${tileHTML(p)}</div>
+        <div class="cart-line-info">
+          <b>${l.name}</b>
+          <span class="cl-weight">${l.weight}</span>
+          <div class="cl-row">
+            <span class="cl-qty"><button type="button" class="cl-minus" aria-label="Decrease quantity">−</button><span>${l.qty}</span><button type="button" class="cl-plus" aria-label="Increase quantity">+</button></span>
+            <span class="cl-price">₹${l.qty*l.price}</span>
+          </div>
+          <button type="button" class="cl-remove">Remove</button>
+        </div>
+      </div>`;
+    }).join('');
+
+    body.querySelectorAll('.cart-line').forEach(row=>{
+      const i = Number(row.dataset.i);
+      row.querySelector('.cl-plus').addEventListener('click', ()=>{ cartItems[i].qty++; updateCartUI(); });
+      row.querySelector('.cl-minus').addEventListener('click', ()=>{
+        cartItems[i].qty--;
+        if(cartItems[i].qty <= 0){ removeCartLine(i); } else { updateCartUI(); }
+      });
+      row.querySelector('.cl-remove').addEventListener('click', ()=>removeCartLine(i));
+    });
+    document.getElementById('upsellLink')?.addEventListener('click', (e)=>{
+      e.preventDefault();
+      closeDrawer();
+      document.querySelector(e.target.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    const savings = cartSavings();
+    foot.innerHTML = `
+      <div class="df-row"><span>Subtotal</span><span>₹${cartTotal()}</span></div>
+      ${savings > 0 ? `<div class="df-row df-savings"><span>You're saving</span><span>₹${savings}</span></div>` : ''}
+      <div class="df-row"><span>Delivery</span><span>Confirmed on WhatsApp</span></div>
+      <div class="df-total"><span>Total</span><span>₹${cartTotal()}</span></div>
+      <button type="button" class="btn filled" style="width:100%" id="proceedCheckoutBtn">Proceed to Checkout</button>`;
+    document.getElementById('proceedCheckoutBtn').addEventListener('click', ()=>{ drawerView='checkout'; renderDrawer(); });
+
+  } else {
+    body.innerHTML = `
+      <a href="#" class="back-to-cart" id="backToCartBtn">&larr; Back to cart</a>
+      <p class="checkout-step">Step 2 — Where should we deliver?</p>
+      <form class="checkout-form" id="checkoutForm" novalidate>
+        <div class="cf-field"><label for="cfName">Full name *</label><input type="text" id="cfName" placeholder="e.g. Ramesh Kumar" required></div>
+        <div class="cf-field"><label for="cfMobile">Mobile number *</label><input type="tel" id="cfMobile" placeholder="e.g. 9876543210" required></div>
+        <div class="cf-field"><label for="cfAddress">Delivery address *</label><input type="text" id="cfAddress" placeholder="House no., street, area" required></div>
+        <div class="cf-row2">
+          <div class="cf-field"><label for="cfCity">City *</label><input type="text" id="cfCity" placeholder="e.g. Guntur" required></div>
+          <div class="cf-field"><label for="cfState">State *</label><input type="text" id="cfState" placeholder="e.g. Andhra Pradesh" required></div>
+        </div>
+        <div class="cf-field"><label for="cfPincode">Pincode *</label><input type="text" id="cfPincode" placeholder="e.g. 522001" inputmode="numeric" maxlength="6" required></div>
+        <span class="cf-error" id="cfError">Please fill in the field(s) marked in red above.</span>
+        <p class="cf-note">No online payment needed — you'll pay cash when your order is delivered.</p>
+      </form>`;
+    foot.innerHTML = `
+      <div class="df-row"><span>Items</span><span>${cartCount()}</span></div>
+      ${cartSavings() > 0 ? `<div class="df-row df-savings"><span>You're saving</span><span>₹${cartSavings()}</span></div>` : ''}
+      <div class="df-total"><span>Total</span><span>₹${cartTotal()}</span></div>
+      <div class="df-row" style="margin-bottom:14px"><span>Payment</span><span>Cash on Delivery</span></div>
+      <button type="button" class="btn filled" style="width:100%" id="confirmOrderBtn">Confirm Order on WhatsApp</button>`;
+    document.getElementById('backToCartBtn').addEventListener('click', (e)=>{ e.preventDefault(); drawerView='cart'; renderDrawer(); });
+    document.getElementById('confirmOrderBtn').addEventListener('click', confirmOrderOnWhatsApp);
+  }
+}
+
+function confirmOrderOnWhatsApp(){
+  const fields = ['cfName','cfMobile','cfAddress','cfCity','cfState','cfPincode'];
+  const values = {};
+  let valid = true;
+  let firstInvalid = null;
+  fields.forEach(id=>{
+    const el = document.getElementById(id);
+    values[id] = el.value.trim();
+    const fieldValid = !!values[id];
+    el.classList.toggle('cf-invalid', !fieldValid);
+    if(!fieldValid){ valid = false; if(!firstInvalid) firstInvalid = el; }
+  });
+  const errEl = document.getElementById('cfError');
+  if(!valid){ errEl.classList.add('show'); if(firstInvalid) firstInvalid.focus(); return; }
+  errEl.classList.remove('show');
+
+  const lines = cartItems.map(l=>`- ${l.name} (${l.weight}) x${l.qty} — ₹${l.price} each = ₹${l.qty*l.price}`).join('\n');
+  const message = `Hi Murali Pickles! I'd like to order these snacks/sweets:\n${lines}\n\nTotal: ₹${cartTotal()}\nPayment: Cash on Delivery (COD)\n\nDeliver to:\n${values.cfName}\n${values.cfMobile}\n${values.cfAddress}, ${values.cfCity}, ${values.cfState} - ${values.cfPincode}\n\nPlease confirm availability and delivery details.`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+
+  cartItems = [];
+  drawerView = 'success';
+  updateCartUI();
+}
+
+document.getElementById('cartBtn').addEventListener('click', openDrawer);
+document.getElementById('mobileCartBtn').addEventListener('click', openDrawer);
+document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+drawerBackdrop.addEventListener('click', closeDrawer);
+
+// ===== Floating WhatsApp / footer help =====
+function waLink(msg){ return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`; }
+document.getElementById('waFloat').addEventListener('click', ()=>{ window.open(waLink('Hi Murali Pickles! I need some help with the snacks & sweets.'), '_blank'); });
+document.getElementById('footerWhatsapp').addEventListener('click', (e)=>{ e.preventDefault(); window.open(waLink('Hi Murali Pickles!'), '_blank'); });
+
+// ===== Mascot shopping guide (dismissible, remembers if you've seen it) =====
+const mascotCard = document.getElementById('mascotCard');
+const mascotMsg = document.getElementById('mascotMsg');
+const mascotActions = document.getElementById('mascotActions');
+const TOUR_STEPS = [
+  { text: "This is where you'll find hot snacks, sweets and village specials — tap any item to see details.", target: '#hot' },
+  { text: 'Pick a size, set how many packs, then tap Add to cart.', target: '#hot' },
+  { text: "Tap Cart up top anytime to see what you've added and checkout.", target: 'top' },
+  { text: 'Checkout is quick — we confirm on WhatsApp and you pay cash on delivery. Happy snacking! 🎉', target: null }
+];
+let tourIndex = -1; // -1 = greeting screen, 0+ = tour steps
+
+function scrollToTarget(target){
+  if(!target) return;
+  if(target === 'top'){ window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+  document.querySelector(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function renderMascot(){
+  if(tourIndex === -1){
+    mascotMsg.textContent = "Hi, I'm Murali! 👋 Want a quick tour of how to shop for snacks?";
+    mascotActions.innerHTML = `<button type="button" class="btn filled small" id="mascotStart">Show me around</button><button type="button" class="btn outline dark small" id="mascotNoThanks">No thanks</button>`;
+    document.getElementById('mascotStart').addEventListener('click', ()=>{ cancelAutoGreet(); tourIndex = 0; renderMascot(); });
+    document.getElementById('mascotNoThanks').addEventListener('click', dismissMascot);
+    return;
+  }
+  const step = TOUR_STEPS[tourIndex];
+  const isLast = tourIndex === TOUR_STEPS.length - 1;
+  mascotMsg.textContent = step.text;
+  mascotActions.innerHTML = `${tourIndex > 0 ? '<button type="button" class="btn outline dark small" id="mascotPrev">Back</button>' : ''}<button type="button" class="btn filled small" id="mascotNext">${isLast ? 'Got it!' : 'Next'}</button>`;
+  scrollToTarget(step.target);
+  if(tourIndex > 0) document.getElementById('mascotPrev').addEventListener('click', ()=>{ tourIndex--; renderMascot(); });
+  document.getElementById('mascotNext').addEventListener('click', ()=>{
+    if(isLast){ dismissMascot(); } else { tourIndex++; renderMascot(); }
+  });
+}
+function showMascotCard(){ mascotCard.hidden = false; }
+function hideMascotCard(){ mascotCard.hidden = true; }
+let autoGreetTimer = null;
+function cancelAutoGreet(){ if(autoGreetTimer){ clearTimeout(autoGreetTimer); autoGreetTimer = null; } }
+function dismissMascot(){
+  cancelAutoGreet();
+  hideMascotCard();
+  try{ localStorage.setItem('muraliSnacksTourSeen', '1'); }catch(e){}
+}
+document.getElementById('mascotClose').addEventListener('click', dismissMascot);
+document.getElementById('mascotToggle').addEventListener('click', ()=>{
+  cancelAutoGreet();
+  if(mascotCard.hidden){ tourIndex = -1; renderMascot(); showMascotCard(); }
+  else { hideMascotCard(); }
+});
+(function autoGreetOnce(){
+  let seen = false;
+  try{ seen = localStorage.getItem('muraliSnacksTourSeen') === '1'; }catch(e){}
+  if(!seen){ autoGreetTimer = setTimeout(()=>{ tourIndex = -1; renderMascot(); showMascotCard(); }, 1400); }
+})();
+
+// ===== Mobile menu =====
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuBackdrop = document.getElementById('menuBackdrop');
+function closeMobileMenu(){
+  mobileMenu.classList.remove('open');
+  menuBackdrop.classList.remove('open');
+  hamburgerBtn.setAttribute('aria-expanded','false');
+}
+hamburgerBtn.addEventListener('click', ()=>{
+  const open = mobileMenu.classList.toggle('open');
+  menuBackdrop.classList.toggle('open', open);
+  hamburgerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+menuBackdrop.addEventListener('click', closeMobileMenu);
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMobileMenu));
+
+// ===== Escape closes any open overlay =====
+document.addEventListener('keydown', (e)=>{
+  if(e.key !== 'Escape') return;
+  quickView.hidden = true;
+  closeDrawer();
+  closeMobileMenu();
+  hideMascotCard();
+});
+
+</script>
+</body>
+</html>
