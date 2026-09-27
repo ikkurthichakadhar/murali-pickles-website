@@ -123,7 +123,7 @@ em{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}
 .product-body{padding:18px 16px}
 .product-body h3{font-family:'Playfair Display',serif;font-weight:600;margin:0 0 4px;font-size:18px;color:var(--navy)}
 .product-body p{margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.5;min-height:38px}
-.price-line{display:flex;align-items:baseline;gap:7px;margin-bottom:12px;flex-wrap:nowrap}
+.price-line{display:flex;align-items:baseline;gap:7px;margin-bottom:12px;flex-wrap:wrap;row-gap:4px}
 .price-line .pw{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
 .price-line .now{color:var(--navy);font-weight:800;font-size:17px;font-family:'Playfair Display',serif}
 .price-line .mrp{color:var(--muted);text-decoration:line-through;font-size:12px}
@@ -255,11 +255,12 @@ em{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}
 @media(max-width:780px){
   .navlinks{display:none}
   .nav{grid-template-columns:auto 1fr auto auto}
+  .nav-right > a.btn{display:none}
   .hamburger{display:flex}
   .mobile-cart-bar{display:none}
 }
 @media(max-width:520px){
-  .product-grid{grid-template-columns:1fr 1fr}
+  .product-grid{grid-template-columns:1fr}
   .section{padding:60px 18px}
   .hero{padding:70px 18px 50px}
   .mobile-cart-bar{display:flex}
