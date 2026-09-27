@@ -82,7 +82,7 @@ em{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}
 .hero-strip span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:700;letter-spacing:.03em}
 
 /* section shell */
-.section{padding:90px clamp(20px,6vw,90px);scroll-margin-top:90px}
+.section{padding:90px clamp(20px,6vw,90px)}
 .eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;position:relative;padding-bottom:12px}
 .eyebrow::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:26px;height:2px;background:linear-gradient(90deg,transparent,var(--orange),transparent)}
 .section h2{font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,42px);margin:12px 0 0;color:var(--navy);line-height:1.15}
@@ -915,19 +915,6 @@ hamburgerBtn.addEventListener('click', ()=>{
 });
 menuBackdrop.addEventListener('click', closeMobileMenu);
 mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMobileMenu));
-
-// ===== Fix cold-load hash navigation landing at the wrong scroll position =====
-// If the page is opened directly at a fragment (e.g. a shared "#hot" link) before
-// images above it have finished loading, the browser can compute the scroll target
-// against a shorter, not-yet-settled page and land in the wrong spot. Re-apply the
-// scroll once everything has actually finished loading and laid out.
-if(location.hash){
-  const fixHashScroll = ()=>{
-    const target = document.querySelector(location.hash);
-    if(target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
-  };
-  window.addEventListener('load', ()=>setTimeout(fixHashScroll, 120));
-}
 
 // ===== Escape closes any open overlay =====
 document.addEventListener('keydown', (e)=>{
