@@ -161,7 +161,7 @@ em{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}
 .trust-item span{display:block;color:var(--muted);font-size:12.5px}
 
 /* section shell */
-.section{padding:100px clamp(20px,6vw,90px)}
+.section{padding:100px clamp(20px,6vw,90px);scroll-margin-top:90px}
 .section.tight{padding-top:0}
 .eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;position:relative;padding-bottom:12px}
 .eyebrow::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:26px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
@@ -1540,6 +1540,20 @@ document.addEventListener('keydown', (e)=>{
   hideMascotCard();
 });
 
+// ===== Fix cold-load hash navigation landing at the wrong scroll position =====
+// If the page is opened directly at a fragment (e.g. a shared "#shop" link, or the
+// browser restoring scroll on refresh) before images above it have finished loading,
+// the browser computes the scroll target against a shorter, not-yet-settled page and
+// can land far from the real section - sometimes on a blank stretch between sections.
+// Re-apply the scroll once everything has actually finished loading and laid out.
+if(location.hash){
+  const fixHashScroll = ()=>{
+    const target = document.querySelector(location.hash);
+    if(target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+  };
+  window.addEventListener('load', ()=>setTimeout(fixHashScroll, 120));
+}
+
 // ===== Nav shrink-on-scroll =====
 const navEl = document.querySelector('.nav');
 window.addEventListener('scroll', ()=>{
@@ -1556,11 +1570,15 @@ if('IntersectionObserver' in window){
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.01, rootMargin: '0px 0px 400px 0px' });
   revealEls.forEach(el=>revealObserver.observe(el));
 } else {
   revealEls.forEach(el=>el.classList.add('in-view'));
 }
+// Safety net: a fast anchor-jump (e.g. clicking "Shop the Collection" right after
+// page load) can occasionally land past a section before its reveal fires. Force
+// everything visible shortly after load so content never stays stuck invisible.
+setTimeout(()=>{ revealEls.forEach(el=>el.classList.add('in-view')); }, 2000);
 
 // ===== Journey video: play/pause, mute/unmute, autoplay (muted) while on screen =====
 const journeyVideo = document.getElementById('journeyVideo');
